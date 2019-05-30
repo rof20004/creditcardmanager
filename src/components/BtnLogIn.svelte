@@ -1,6 +1,6 @@
 <script>
   function gotoLogin() {
-    window.location.href = '/signin';
+    window.location.href = '/credentials';
   }
 </script>
 

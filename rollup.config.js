@@ -10,6 +10,7 @@ import pkg from './package.json';
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+const ambient = dev ? 'http://localhost:3000' : (mode === 'production' ? 'http://localhost:3000' : 'https://creditcardmanagerr.firebaseapp.com');
 
 export default {
 	client: {
@@ -18,7 +19,8 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				'process.env.API_URL': ambient
 			}),
 			svelte({
 				dev,

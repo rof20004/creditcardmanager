@@ -3,3 +3,8 @@ node_modules
 yarn-error.log
 /cypress/screenshots/
 /__sapper__/
+.firebase
+.sessions
+functions/__sapper__
+functions/.sessions
+functions/static

@@ -4,7 +4,7 @@
 </script>
 
 <main>
-  {#if segment !== 'signin'}
+  {#if segment !== 'credentials'}
     <Nav { segment }/>
   {/if}
   <slot></slot>
