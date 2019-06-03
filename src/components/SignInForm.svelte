@@ -27,7 +27,7 @@
   async function signIn() {
     const headers = new Headers()
     headers.append('Content-Type', 'application/json; charset=utf-8')
-    const response = await fetch(`${"process.env.API_URL"}/signin`, {
+    const response = await fetch(window.location.protocol + '//' + window.location.host + '/signin', {
       method: 'POST',
       headers: headers,
       body: JSON.stringify({ username, password })
